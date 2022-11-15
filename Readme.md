@@ -32,7 +32,7 @@ or
 git push origin :v8
 git tag -d v8
 git tag v8
-git push origin v8_source --tags
+git push origin master --tags
 ```
 
 ## Recursive dependencies
