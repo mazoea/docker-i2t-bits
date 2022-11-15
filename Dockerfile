@@ -36,8 +36,8 @@ RUN g++ --version || true && \
     python3 --version
 
 # copy
-COPY include /opt/cdn/include
-COPY lib /opt/cdn/lib
+COPY assets/include /opt/cdn/include
+COPY assets/lib /opt/cdn/lib
 ENV TE_LIBS=/opt/cdn
 
 WORKDIR /opt/src/
