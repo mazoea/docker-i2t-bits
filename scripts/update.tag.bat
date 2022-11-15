@@ -1,6 +1,8 @@
-git push origin :mocks
-git tag -d mocks
-git tag mocks
-git push origin mocks_source --tags
+git push origin :v8
+git tag -d v8
+git tag v8
+git push origin master --tags 
 
-pause
+IF "%1"=="nopause" GOTO No1
+    pause
+:No1 
