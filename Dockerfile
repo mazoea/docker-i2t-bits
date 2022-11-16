@@ -38,6 +38,12 @@ RUN g++ --version || true && \
 # copy
 COPY assets/include /opt/cdn/include
 COPY assets/lib /opt/cdn/lib
+RUN cd /opt/cdn/lib && \
+    ln -s libtesseract4-maz.so.4.1.0 libtesseract4-maz.so && \
+    ln -s libtesseract3-maz.so.3.0.2 libtesseract3-maz.so && \
+    ln -s libleptonica1.so.1.78.0 libleptonica1.so && \
+    ls -lah
+
 ENV TE_LIBS=/opt/cdn
 
 WORKDIR /opt/src/
