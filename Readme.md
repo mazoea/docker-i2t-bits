@@ -6,12 +6,12 @@
 
 oneliner
 ```
-docker run --rm -it -e TE_LIBS=/opt/cdn -v d:\te\c-image-to-text:/opt/src registry.gitlab.com/mazoea-team/docker-i2t-bits:latest ./cmaker.sh 6
+docker run --rm -it -e TE_LIBS=/opt/cdn -v d:\te\c-image-to-text:/opt/src ghcr.io/mazoea/docker-i2t-bits:latest ./cmaker.sh 6
 ```
 
 with bash
 ```
-docker run --rm -it -e TE_LIBS=/opt/cdn -v d:\te\c-image-to-text:/opt/src registry.gitlab.com/mazoea-team/docker-i2t-bits:latest /bin/bash
+docker run --rm -it -e TE_LIBS=/opt/cdn -v d:\te\c-image-to-text:/opt/src ghcr.io/mazoea/docker-i2t-bits:latest /bin/bash
 ./cmaker.sh  6
 ```
 
