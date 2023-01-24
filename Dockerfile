@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/mazoea-team/docker-scanbuild:v6.0
+FROM ghcr.io/mazoea/docker-scanbuild:v10
 
 # revert env from base image
 ENV EXTCMD=
