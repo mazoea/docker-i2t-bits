@@ -3,6 +3,10 @@
 [![☃ build-and-publish](https://github.com/mazoea/docker-i2t-bits/actions/workflows/ci.yml/badge.svg?branch=mocks)](https://github.com/mazoea/docker-i2t-bits/actions/workflows/ci.yml)
 
 
+# Depends on scanbuild docker image
+
+Because of clang.
+
 # How to (2019)
 
 1. delete `image/lib/*`
