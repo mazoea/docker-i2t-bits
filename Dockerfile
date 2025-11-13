@@ -1,4 +1,4 @@
-FROM ghcr.io/mazoea/docker-scanbuild:v10
+FROM ghcr.io/mazoea/docker-scanbuild:v18
 
 # revert env from base image
 ENV EXTCMD=
@@ -6,7 +6,7 @@ ENV CMAKE_CXX_COMPILER=/usr/bin/clang++-$CLANGVER \
     CMAKE_C_COMPILER=/usr/bin/clang-$CLANGVER
 
 RUN apt-get -q update && \
-    apt-get -q install -y libc++abi-dev python-dev && \
+    apt-get -q install -y libc++abi-dev python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # copy

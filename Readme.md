@@ -9,33 +9,27 @@ Because of clang.
 
 # How to (2019)
 
-1. delete `image/lib/*`
-2. copy leptonica-1.78.0.tar.gz to `image/packages/`
+1. delete `assets/lib/*`
+2. copy leptonica-1.78.0.tar.gz to `assets/packages/`
 3. compile with clang
 ```
-`cd ./image`
 docker build -t te/cdn-clang-mock .
 ```
 4. copy the library from `te/cdn-clang-mock`
 ```
-cd `./image`
+cd ./assets
 docker run --name tempik te/cdn-clang-mock /bin/true
-cp lib/liblept.so lib/libleptonica1.so.1.78.0
+docker cp tempik:lib/liblept.so lib/libleptonica1.so.1.78.0
+docker rm tempik
 ## something like docker cp tempik:/opt/cdn/include/leptonica/*  include/leptonica/
-docker stop tempik
 ```
 
 5. build i2t mocks (see c-image-to-text/README.ci.md)
 - first build fails - OK, we need the libtesseract* libs
-- copy them to `./image/lib`
+- copy them to `./assets/lib`
 
 # Create new release
-```
-git push origin :mocks
-git tag -d mocks
-git tag mocks
-git push origin mocks_source --tags
-```
+`scripts\update.tag.bat`
 
 
 ===
